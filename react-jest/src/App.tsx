@@ -8,7 +8,8 @@ const App = () => {
   return (
     <div>
       {checked ? <button disabled>btn</button> : <button>btn</button>}
-      <input type="checkbox" onChange={onClick} />
+      <input id="check-btn" type="checkbox" onChange={onClick} />
+      <label htmlFor="check-btn">check</label>
     </div>
   );
 };
