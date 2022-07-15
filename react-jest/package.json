@@ -22,19 +22,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "plugins": [
-      "testing-library",
-      "jest-dom"
-    ],
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "plugin:testing-library/recommended",
-      "plugin:testing-library/react",
-      "plugin:jest-dom/recommended"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
