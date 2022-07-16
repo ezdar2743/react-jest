@@ -6,12 +6,23 @@ const App = () => {
   const changeColor = () => {
     setColorBtn(isColor);
   };
-  console.log(colorBtn);
+  const [disabled, setDisabled] = useState(false);
+
   return (
     <>
-      <button onClick={changeColor} style={{ backgroundColor: colorBtn }}>
+      <button
+        onClick={changeColor}
+        style={{ backgroundColor: colorBtn }}
+        disabled={disabled}
+      >
         Change to {isColor}
       </button>
+      <input
+        type={"checkbox"}
+        defaultChecked={disabled}
+        aria-checked={disabled}
+        onChange={(e) => setDisabled(e.target.checked)}
+      ></input>
     </>
   );
 };
