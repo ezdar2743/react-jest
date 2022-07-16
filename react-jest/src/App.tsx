@@ -17,11 +17,13 @@ const App = () => {
       >
         Change to {isColor}
       </button>
+      <label htmlFor="disabled button">disabled button</label>
       <input
         type={"checkbox"}
         defaultChecked={disabled}
         aria-checked={disabled}
         onChange={(e) => setDisabled(e.target.checked)}
+        id="disabled button"
       ></input>
     </>
   );
