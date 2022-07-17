@@ -1,18 +1,24 @@
 import { useState } from "react";
 
+export const replaceCamelWithSpace = (colorName: string) => {
+  return colorName.replace(/\B([A-Z])\B/g, " $1");
+};
+
+console.log(replaceCamelWithSpace("RedSpdidi"));
 const App = () => {
   const [colorBtn, setColorBtn] = useState("red");
+
+  const [disabled, setDisabled] = useState(false);
   const isColor = colorBtn === "red" ? "blue" : "red";
   const changeColor = () => {
     setColorBtn(isColor);
   };
-  const [disabled, setDisabled] = useState(false);
 
   return (
     <>
       <button
         onClick={changeColor}
-        style={{ backgroundColor: colorBtn }}
+        style={{ backgroundColor: disabled ? "gray" : colorBtn }}
         disabled={disabled}
       >
         Change to {isColor}
