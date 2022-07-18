@@ -12,7 +12,6 @@ test("button change blue when clicked", () => {
   const colorBtn = screen.getByRole("button", { name: "Change to blue" });
   //click
   fireEvent.click(colorBtn);
-
   expect(colorBtn).toHaveStyle({ backgroundColor: "blue" });
   expect(colorBtn.textContent).toBe("Change to red");
 });
